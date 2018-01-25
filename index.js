@@ -1,8 +1,11 @@
 module.exports = {
-    Extension: class Extension {},
+    Extension: require('./src/Extension'),
 
-    Hook: require('./Hooks/Hook'),
-    Filter: require('./Hooks/Filter'),
-    Action: require('./Hooks/Action'),
-    Mutator: require('./Hooks/Mutator'),
+    Hook: require('./src/Hooks/Hook'),
+    
+    Filter: require('./src/Hooks/Filter'),
+
+    Action: require('./src/Hooks/Action'),
+
+    Mutator: require('./src/Hooks/Mutator'),
 }

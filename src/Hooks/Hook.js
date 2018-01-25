@@ -5,21 +5,25 @@ module.exports = class Hook {
     }
 
     this.inheriting = false
+    this.callback = () => {}
   }
 
   method () {
-    return () => { console.log(this.event, 'handled by a', this.type) }
+    return () => { this.callback() }
   }
 
   on (event) {
     this.event = event
+    return this
+  }
 
+  do (callback) {
+    this.callback = callback
     return this
   }
 
   inheriting () {
     this.inheriting = true
-
     return this
   }
 }
