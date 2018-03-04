@@ -4,7 +4,6 @@ module.exports = class Hook {
       throw new TypeError('Cannot construct abstract Hook instances directly')
     }
 
-    this.inheriting = false
     this.callback = () => {}
   }
 
@@ -19,11 +18,6 @@ module.exports = class Hook {
 
   do (callback) {
     this.callback = callback
-    return this
-  }
-
-  inheriting () {
-    this.inheriting = true
     return this
   }
 }
