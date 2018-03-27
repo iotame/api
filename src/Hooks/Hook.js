@@ -4,6 +4,7 @@ module.exports = class Hook {
       throw new TypeError('Cannot construct abstract Hook instances directly')
     }
 
+    this.events = []
     this.callback = () => {}
   }
 
@@ -12,8 +13,12 @@ module.exports = class Hook {
   }
 
   on (event) {
-    this.event = event
+    this.events.push(event)
     return this
+  }
+
+  andOn (event) {
+    return this.on(event)
   }
 
   do (callback) {

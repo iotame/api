@@ -8,6 +8,10 @@ module.exports = class Protocol {
         return []
     }
 
+    static requiredConfiguration () {
+        return []
+    }
+
     begin () {
         // ...
     }
