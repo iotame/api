@@ -1,6 +1,6 @@
 {
   "name": "@iotame/api",
-  "version": "0.0.1",
+  "version": "0.0.6",
   "description": "iotame's extension API",
   "main": "index.js",
   "scripts": {
